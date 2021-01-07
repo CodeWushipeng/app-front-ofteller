@@ -1,0 +1,219 @@
+[
+  {
+    "ctlgId": "C_C_10000",
+    "ctlgName": "个人存款",
+    "parentId": "CS_C_10000",
+    "ctlgType": "FD",
+    "ctlgIdLevel": 1,
+    "description": null,
+    "imageUrl": null,
+    "children": [
+      {
+        "ctlgId": "C_C_10001",
+        "ctlgName": "个人活期",
+        "parentId": "C_C_10000",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": "个人活期",
+        "imageUrl": null
+      },
+      {
+        "ctlgId": "C_C_10002",
+        "ctlgName": "个人定期",
+        "parentId": "C_C_10000",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null
+      },
+      {
+        "ctlgId": "C_C_10006",
+        "ctlgName": "ctlgName22",
+        "parentId": "C_C_10000",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": "ctlgDsc22",
+        "imageUrl": null
+      },
+      {
+        "ctlgId": "C_C_10007",
+        "ctlgName": "个人协议",
+        "parentId": "C_C_10000",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null
+      },
+      {
+        "ctlgId": "C_C_10008",
+        "ctlgName": "智能存款",
+        "parentId": "C_C_10000",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null
+      },
+      {
+        "ctlgId": "C_C_10009",
+        "ctlgName": "个人大额存单",
+        "parentId": "C_C_10000",
+        "ctlgType": "F",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null,
+        "children": [
+          {
+            "ctlgId": "T101",
+            "ctlgName": "大额存单1",
+            "parentId": "C_C_10009",
+            "ctlgType": "FM",
+            "ctlgIdLevel": 3,
+            "description": null,
+            "imageUrl": null
+          },
+          {
+            "ctlgId": "T102",
+            "ctlgName": "大额存单2",
+            "parentId": "C_C_10009",
+            "ctlgType": "FM",
+            "ctlgIdLevel": 3,
+            "description": null,
+            "imageUrl": null
+          }
+        ]
+      },
+      {
+        "ctlgId": "C_C_10010",
+        "ctlgName": "电子现金",
+        "parentId": "C_C_10000",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
+    "ctlgId": "C_C_3210003",
+    "ctlgName": "借记卡",
+    "parentId": "CS_C_10000",
+    "ctlgType": "FD",
+    "ctlgIdLevel": 1,
+    "description": null,
+    "imageUrl": null,
+    "children": [
+      {
+        "ctlgId": "C_C_3210004",
+        "ctlgName": "借记卡",
+        "parentId": "C_C_3210003",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null,
+        "children": [
+          {
+            "ctlgId": "23070001",
+            "ctlgName": "个人活期账户",
+            "parentId": "C_C_3210004",
+            "ctlgType": "C",
+            "ctlgIdLevel": 3,
+            "description": null,
+            "imageUrl": null
+          },
+          {
+            "ctlgId": "23070002",
+            "ctlgName": "个人卡",
+            "parentId": "C_C_3210004",
+            "ctlgType": "C",
+            "ctlgIdLevel": 3,
+            "description": null,
+            "imageUrl": null
+          },
+          {
+            "ctlgId": "23070004",
+            "ctlgName": "个人定期",
+            "parentId": "C_C_3210004",
+            "ctlgType": "C",
+            "ctlgIdLevel": 3,
+            "description": null,
+            "imageUrl": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ctlgId": "C_C_3310003",
+    "ctlgName": "理财产品",
+    "parentId": "CS_C_10000",
+    "ctlgType": "FD",
+    "ctlgIdLevel": 1,
+    "description": null,
+    "imageUrl": null,
+    "children": [
+      {
+        "ctlgId": "C_C_3310004",
+        "ctlgName": "封闭式理财",
+        "parentId": "C_C_3310003",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null
+      },
+      {
+        "ctlgId": "C_C_3410000",
+        "ctlgName": "理财产品持有证明",
+        "parentId": "C_C_3310003",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null
+      },
+      {
+        "ctlgId": "C_C_3410001",
+        "ctlgName": "理财产品份额冻结",
+        "parentId": "C_C_3310003",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null
+      },
+      {
+        "ctlgId": "C_C_3410002",
+        "ctlgName": "理财产品份额查询",
+        "parentId": "C_C_3310003",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null
+      },
+      {
+        "ctlgId": "C_C_3410003",
+        "ctlgName": "理财产品收益率查询",
+        "parentId": "C_C_3310003",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null
+      },
+      {
+        "ctlgId": "C_C_3460000",
+        "ctlgName": "开放式理财",
+        "parentId": "C_C_3310003",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null
+      },
+      {
+        "ctlgId": "C_C_3560000",
+        "ctlgName": "客户额度管理",
+        "parentId": "C_C_3310003",
+        "ctlgType": "FM",
+        "ctlgIdLevel": 2,
+        "description": null,
+        "imageUrl": null
+      }
+    ]
+  }
+]

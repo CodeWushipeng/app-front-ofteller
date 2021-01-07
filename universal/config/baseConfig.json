@@ -1,0 +1,19 @@
+{
+  "port": "20998",
+  "topic": "Qloudbus.Configuration",
+  "auth": {
+    "url": "http://49.4.93.173:31009",
+    "rolename": "dapwebui",
+    "servicename": "dapwebui"
+  },
+  "qmsPartic": "http://qmspartic.pditdap.service.sd",
+  "aggregator": "http://192.168.1.194:21004/",
+  "flowDevelop": "http://192.168.1.194:21004/",
+  "menuDevelop": "http://192.168.1.194:21004/",
+  "formDevelop": "http://192.168.1.194:21004/",
+  "oauth": "http://192.168.0.82:8089",
+  "templateDevelop": "http://192.168.1.196:9998",
+  "printModelDevelop": "http://192.168.1.194:9996",
+  "application": "ocsp-web-form",
+  "WNToken": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJ6aGFuZ3NhbiIsInJvbGUiOlsiYWRtaW4iLCJ1c2VyIl0sImlzcyI6IkdlbnQuTmkiLCJleHAiOjE1OTUyMzI3NjEsImlhdCI6MTU5NTIzMjE2MX0.ZyN5W7aph5ZTypOjwEWSiAMQI9F1x-K7msXuhlaHH1-AkU3Ses-QIK4HgKqmQpCfXJ_lUH69tHplFJxkeDZzxq3i9Ov4dj5Lnu4kfJczv4Aq8cXYm2dZjdR5HMHamEVTMsg2CKQWFnRvKbEr2r1BkLneMP_PPFMZwTfz6fD9waA"
+}

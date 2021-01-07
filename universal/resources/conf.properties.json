@@ -1,0 +1,35 @@
+{
+    "development":{
+      "nacosCommonParaAddress":{
+        "httpType":"http",
+        "url":"192.168.2.179",
+        "port":"30138",
+        "serverName":"/nacos/v1/cs/configs?dataId=ocsp-web-form-dev&group=WEB_PC&tenant=public",
+        "inputPara":{
+
+        }
+      },
+      "nacosReqForwardAddress":{
+        "httpType":"http",
+        "url":"192.168.2.179",
+        "port":"30138",
+        "serverName":"/nacos/v1/cs/configs?dataId=ocsp-web-sample-commitfun-dev&group=WEB_PC&tenant=public",
+        "inputPara":{
+
+        }
+      },
+      "nacosGlobalPara":{
+        "httpType":"http",
+        "url":"192.168.2.179",
+        "port":"30138",
+        "serverName":"/nacos/v1/cs/configs?dataId=ocsp-web-sample-globalpara-dev&group=WEB_PC&tenant=public",
+        "inputPara":{
+
+        }
+      },
+      "websoket":{
+        "port":"8060"
+      }
+    }
+
+}

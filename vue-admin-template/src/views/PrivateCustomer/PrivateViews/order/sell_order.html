@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+label.label_title {
+    font-weight: normal;
+    width: 168px;
+    color:#000000;
+}
+</style>
+</head>
+<div id="printsrc">
+
+</div>
+<body>
+	<div class="top_nav ng-scope">
+		<div class="top_nav_left">
+			<label>{{maincom.optTitleForSell}}</label>
+		</div>
+	</div>
+	<div class="container" ng-style="maincom.CSS_TABHEIGHT_AUTO_ORDER"
+		style="width: 100%;">
+		<div id="toolbar">
+			<div class="form-inline pull-right" style="font-size: 15px; margin-right: 40px" role="form">
+				订单项数量<span style="color: #3b95f2">（<spanstyle ="color:
+						#3b95f2" id="orderProductCountForSell">{{maincom.orderProductCountForSell}}</span>）</span>
+			</div>
+		</div>
+		<table id="orderItemsTableForSell" data-show-header="true"
+			data-click-to-select="true"
+			data-classes="table table-hover table-no-bordered">
+			<thead>
+				<tr>
+					<th data-field="productId" class="tdMiddle">产品编号</th> 									
+					<th data-field="productName" class="tdMiddle">产品名称</th>
+					<th data-field="productFunctionName" class="tdMiddle">产品功能</th> 
+					<th data-field="showOrderAmount" data-formatter="showOrderAmountFormatterBySellWin" class="tdMiddle">金额</th>
+					<th data-field="desc" data-formatter="showRateFloatBySellWin" class="tdMiddle">备注</th>
+					<th data-field="promoDesc" data-formatter="showShoppingCartPromoBySellWin" class="tdMiddle">促销信息</th>
+				</tr>							
+			</thead>	
+		</table>
+		<button type="button" class="btn btn-blue btn-blue-lrtb-5" ng-show="maincom.isShowProductPayToolsForSell" ng-click="maincom.showProductPayToolsForSell('sellPaymentTools')">订单支付方式选择</button><br />
+		<div style="font-size: 14px">
+			<span id="productPayToolsNameForSell" style="color: #3b95f2"></span>
+			<ul ng-show="maincom.isShowProductPayForSell">
+				<div ng-show = "maincom.isShowAccountNumberForSell"><label class="label_title">付款账户</label><input style="left: 15px;width:180px" type="text" maxlength="35" id="accountNumberForSellId" ng-model="maincom.accountNumberForSell" name="accountNumberForSell" next-ele="maincom.agreementContentForSell" ng-keydown="subaccountNumberQueryForSellEnter($event)"/></div>
+				<div ng-show = "maincom.isShowAccountNameForSell"><label class="label_title">付款账户户名</label><input style="left: 15px;width:180px" type="text" ng-model="maincom.accountNameForSell" name="accountNameForSell" readonly="true"/></div>
+				<div ng-show = "maincom.isShowSubAccountNumberForSell"><label class="label_title">付款子序号</label><input style="left: 15px;width:180px" type="text" ng-model="maincom.subAccountNumberForSell" name="subAccountNumberForSell"  readonly="true"/></div>
+				<div ng-show = "maincom.isShowPaymentIssuerPartyIdForSell"><label class="label_title">账户开户行号/机构</label><input style="left: 15px;width:180px" type="text" ng-model="maincom.paymentIssuerPartyIdForSell" name="paymentIssuerPartyIdForSell" readonly="true"/></div>
+				
+				<div ng-show = "maincom.isShowAccountNumberOBForSell"><label class="label_title"><span class="requiredSpan">*</span>支付账号</label><input style="left: 15px;width:180px" type="text" maxlength="35" id="accountNumberOBForSellId" ng-model="maincom.accountNumberOBForSell" next-ele="maincom.accountNameOBForSell" name="accountNumberOBForSell"/></div>
+				<div ng-show = "maincom.isShowAccountNameOBForSell"><label class="label_title"><span class="requiredSpan">*</span>支付账户户名</label><input style="left: 15px;width:180px" type="text" maxlength="180" ng-model="maincom.accountNameOBForSell"  next-ele="maincom.paymentPartyNameOBForSell"  name="accountNameOBForSell" /></div>
+				<div ng-show = "maincom.isShowPaymentPartyNameOBForSell"><label class="label_title"><span class="requiredSpan">*</span>支付行名/机构名</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.paymentPartyNameOBForSell" next-ele="maincom.paymentPartyIdOBForSell" name="paymentPartyNameOBForSell" ng-keydown="queryBankInfoForSellEnter($event)"/></div>
+				<div ng-show = "maincom.isShowPaymentPartyIdOBForSell"><label class="label_title"><span class="requiredSpan">*</span>支付行号/机构</label><input style="left: 15px;width:180px" type="text" maxlength="20" maxlength="20" ng-model="maincom.paymentPartyIdOBForSell" next-ele="maincom.accountAddressForSell" name="paymentPartyIdOBForSell"/></div>
+				<div ng-show = "maincom.isShowAccountAddressForSell"><label class="label_title">支付账户地址</label><input style="left: 15px;width:180px" type="text" maxlength="60" ng-model="maincom.accountAddressForSell" name="accountAddressForSell"/></div>
+				
+				<div ng-show = "maincom.isShowPayerCertTypeForSell"><label class="label_title">证件类型</label>
+					<select id="payerCertTypeForSell" style="padding-left: 10px; width: 180px; height: 25px;" ng-model="maincom.payerCertTypeForSell"
+						ng-options="payerCertType.value as payerCertType.text for payerCertType in maincom.payerCertTypesForSell"></select>
+				</div>				
+				<div ng-show = "maincom.isShowPayerCertNoForSell"><label class="label_title">证件号码</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.payerCertNoForSell" name="payerCertNoForSell" /></div>
+				<div ng-show = "maincom.isShowAgreementTypeForSell"><label class="label_title">支付方式</label>
+					<select disabled id="agreementTypeForSell" style="padding-left: 10px; width: 180px; height: 25px;" ng-model="maincom.agreementTypeForSell"
+						ng-options="agreementType.value as agreementType.text for agreementType in maincom.agreementTypes"></select>
+				</div>
+				<div ng-show = "maincom.isShowAgreementContentForSell"><label class="label_title">{{maincom.agreementContentNameForSell}}</label><input style="left: 15px;width:180px" type="password" onfocus="if(this.value !== ''){this.value=''}" ng-model="maincom.agreementContentForSell" next-ele="maincom.certificateIdForSell" name="agreementContentForSell"/></div>
+				<div ng-show = "maincom.isShowSummaryCodeForSell"><label class="label_title">摘要码</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.summaryCodeForSell" name="summaryCodeForSell" /></div>
+				<div ng-show = "maincom.isShowCashCaseCodeForSell"><label class="label_title">现金项目代码</label>
+					<select id="cashCaseCodeForSell" style="padding-left: 10px; width: 180px; height: 25px;"  ng-model="maincom.cashCaseCodeForSell">
+						<option value="">无</option>
+						<option value="{{ item.value }}" ng-repeat="item in maincom.cashCaseCodesForSell">{{ item.text }}</option>
+					</select>
+				</div>			                                                                                                                    
+				<div ng-show = "maincom.isShowCertificateTypeForSell"><label class="label_title">凭证种类</label>
+					<select id="certificateTypeForSell" style="padding-left: 10px; width: 180px; height: 25px;" ng-model="maincom.certificateTypeForSell"
+						ng-options="certificateType.value as certificateType.text for certificateType in maincom.certificateTypes"></select>
+				</div>
+				<div ng-show = "maincom.isShowCertificateIdForSell"><label class="label_title">凭证号码</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.certificateIdForSell" next-ele="maincom.certificateBatchForSell" name="certificateIdForSell" /></div>
+				<div ng-show = "maincom.isShowCertificateBatchForSell"><label class="label_title">凭证批次</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.certificateBatchForSell" next-ele="maincom.chequeNoteDateForSell" name="certificateBatchForSell" /></div>
+		 	<div ng-show = "maincom.isShowChequeNoteDateForSell">
+					<label class="label_title">出票日期</label>
+					<input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.chequeNoteDateForSell" next-ele="maincom.purposeForSell" name="chequeNoteDateForSell" />
+				</div> 
+		<!--		<div class="form-group" style="margin-top: 40px;">			
+						<label class="label_title">出票日期</label>
+						<div id="chequeNoteDateForSell" 
+							class="input-group date form_start_datetime" data-date-format="yyyymmdd" data-link-field="dtp_input1">
+							<input class="form-control" style="background-color: white;" id="chequeNoteDateForSell" size="16" type="text" value="" readonly>
+							<span class="input-group-addon order_datetime"><span class="glyphicon glyphicon-th"></span></span>
+					</div>
+				</div>
+			-->	
+				<div ng-show = "maincom.isShowPurposeForSell"><label class="label_title">用途</label><input style="left: 15px;width:180px" type="text" ng-model="maincom.purposeForSell" name="purposeForSell" /></div>
+				<div ng-show = "maincom.isShowCashOrRemitFlagForSell"><label class="label_title">钞汇标志</label>
+					<select id="cashOrRemitFlagForSell" style="padding-left: 10px; width: 180px; height: 25px;" ng-model="maincom.cashOrRemitFlagForSell"
+						ng-options="cashOrRemitFlag.value as cashOrRemitFlag.text for cashOrRemitFlag in maincom.cashOrRemitFlags"></select>
+				</div>
+				<div ng-show = "maincom.isShowSysCustTypeForSell"><label class="label_title">客户类型</label>
+					<select id="sysCustTypeForSell" style="padding-left: 10px; width: 180px; height: 25px;" ng-model="maincom.sysCustTypeForSell"
+						ng-options="sysCustType.value as sysCustType.text for sysCustType in maincom.sysCustTypes"></select>
+				</div> 
+				
+				<div ng-show = "maincom.isShowWtofSrlNumForSell"><label class="label_title">待销账序号</label><input style="left: 15px;width:180px" type="text" maxlength="35" ng-model="maincom.wtofSrlNumForSell" name="wtofSrlNumForSell" next-ele="maincom.drwAcctForSell" ng-keydown="forInformationEnquiryForSellEnter($event)"/></div>
+				<div ng-show = "maincom.isShowDrwAcctForSell"><label class="label_title">待销账来源账号</label><input style="left: 15px;width:180px" type="text" maxlength="35" ng-model="maincom.drwAcctForSell" next-ele="maincom.subPyrAcctNumForSell" name="drwAcctForSell" /></div>
+				<div ng-show = "maincom.isShowSubPyrAcctNumForSell"><label class="label_title">待销账来源账号子账户序号</label><input style="left: 15px;width:180px" type="text" ng-model="maincom.subPyrAcctNumForSell" next-ele="maincom.drawNmForSell" name="subPyrAcctNumForSell" /></div>
+				<div ng-show = "maincom.isShowDrawNmForSell"><label class="label_title">待销账来源户名</label><input style="left: 15px;width:180px" type="text" maxlength="60" ng-model="maincom.drawNmForSell" name="drawNmForSell" /></div>				
+				<div ng-show = "maincom.isShowPymtAcctTpForSell"><label class="label_title">待销账来源账户类型</label><input style="left: 15px;width:180px" type="text" ng-model="maincom.pymtAcctTpForSell" name="pymtAcctTpForSell" /></div>				
+				<button ng-show="maincom.isShowVerifyPayBtnForSell" type="button" class="btn btn-default" ng-click="maincom.verifyProductPayInfoForSell()">验证支付项信息</button>
+			<!--  	<span style="color: #3b95f2">验磁验密</span> 验证通过-->
+			</ul>
+		</div>
+		<!-- 费用支付方式 -->
+		<button type="button" class="btn btn-blue btn-blue-lrtb-5" ng-show="maincom.isShowFeePayToolsForSell" ng-click="maincom.showProductPayToolsForSell('feeForSellPaymentTools')" >费用支付方式选择</button>
+		<div style="font-size: 14px">
+			<span id="feePaymentToolName" style="color: #3b95f2"></span>
+			<ul ng-show="maincom.isShowProductFeePayForSell">
+				<div ng-show = "maincom.isShowFeeAccountNumberForSell"><label class="label_title">付款账户</label><input style="left: 15px;width:180px" type="text" maxlength="35" id="accountNumberFeeForSellId" ng-model="maincom.accountNumberFeeForSell" name="accountNumberFeeForSell" next-ele="maincom.agreementContentFeeForSell" ng-keydown="subaccountNumberQueryFeeForSellEnter($event)"/></div>
+				<div ng-show = "maincom.isShowFeeAccountNameForSell"><label class="label_title">付款账户户名</label><input style="left: 15px;width:180px" type="text" ng-model="maincom.accountNameFeeForSell" name="accountNameFeeForSell"  readonly="true"/></div>
+				<div ng-show = "maincom.isShowFeeSubAccountNumberForSell"><label class="label_title">付款账户子序号</label><input style="left: 15px;width:180px" type="text" ng-model="maincom.subAccountNumberFeeForSell" name="subAccountNumberFeeForSell"  readonly="true"/></div>
+				<div ng-show = "maincom.isShowFeePaymentIssuerPartyIdForSell"><label class="label_title">账户开户行号/机构</label><input style="left: 15px;width:180px" type="text" ng-model="maincom.paymentIssuerPartyIdFeeForSell" name="paymentIssuerPartyIdFeeForSell"  readonly="true"/></div>
+				<div ng-show = "maincom.isShowFeePayerCertTypeForSell"><label class="label_title">证件类型</label>
+					<select id="payerCertTypeFeeForSell" style="padding-left: 10px; width: 180px; height: 25px;" ng-model="maincom.payerCertTypeFeeForSell"
+						ng-options="payerCertType.value as payerCertType.text for payerCertType in maincom.payerCertTypesForSell"></select>
+				</div>					
+				<div ng-show = "maincom.isShowFeePayerCertNoForSell"><label class="label_title">证件号码</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.payerCertNoFeeForSell" name="payerCertNoFeeForSell" /></div>
+				<div ng-show = "maincom.isShowFeeAgreementTypeForSell"><label class="label_title">支付方式</label>
+					<select  id="agreementTypeFeeForSell" style="padding-left: 10px; width: 180px; height: 25px;" ng-model="maincom.agreementTypeFeeForSell"
+						ng-options="agreementType.value as agreementType.text for agreementType in maincom.agreementTypes"></select>
+				</div>
+				<div ng-show = "maincom.isShowFeeAgreementContentForSell"><label class="label_title">{{maincom.agreementContentNameFeeForSell}}</label><input style="left: 15px;" type="password" onfocus="if(this.value !== ''){this.value=''}" ng-model="maincom.agreementContentFeeForSell" name="agreementContentFeeForSell" /></div>
+				<div ng-show = "maincom.isShowFeeSummaryCodeForSell"><label class="label_title">摘要码</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.summaryCodeFeeForSell" next-ele="maincom.certificateIdFeeForSell"  name="summaryCodeFeeForSell" /></div>
+				<div ng-show = "maincom.isShowFeeCashCaseCodeForSell"><label class="label_title">现金项目代码</label>
+					<select id="cashCaseCodeFeeForSell" style="padding-left: 10px; width: 180px; height: 25px;"  ng-model="maincom.cashCaseCodeFeeForSell">
+						<option value="">无</option>
+						<option value="{{ item.value }}" ng-repeat="item in maincom.cashCaseCodesForSell">{{ item.text }}</option>
+					</select>
+				</div>
+				<div ng-show = "maincom.isShowFeeCertificateTypeForSell"><label class="label_title">凭证种类</label>
+					<select id="certificateTypeFeeForSell" style="padding-left: 10px; width: 180px; height: 25px;" ng-model="maincom.certificateTypeFeeForSell"
+						ng-options="certificateType.value as certificateType.text for certificateType in maincom.certificateTypes"></select>
+				</div>				
+				<div ng-show = "maincom.isShowFeeCertificateIdForSell"><label class="label_title">凭证号码</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.certificateIdFeeForSell" next-ele="maincom.certificateBatchFeeForSell" name="certificateIdFeeForSell" /></div>
+				<div ng-show = "maincom.isShowFeeCertificateBatchForSell"><label class="label_title">凭证批次</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.certificateBatchFeeForSell" next-ele="maincom.chequeNoteDateFeeForSell"  name="certificateBatchFeeForSell" /></div>
+				<div ng-show = "maincom.isShowFeeChequeNoteDateForSell"><label class="label_title">出票日期</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.chequeNoteDateFeeForSell" next-ele="maincom.purposeFeeForSell" name="chequeNoteDateFeeForSell" /></div>
+				<div ng-show = "maincom.isShowPurposeFeeForSell"><label class="label_title">用途</label><input style="left: 15px;width:180px" type="text" ng-model="maincom.purposeFeeForSell" name="purposeFeeForSell" /></div>
+				<div ng-show = "maincom.isShowFeeCashOrRemitFlagForSell"><label class="label_title">钞汇标志</label>
+					<select id="cashOrRemitFlagFeeForSell" style="padding-left: 10px; width: 180px; height: 25px;" ng-model="maincom.cashOrRemitFlagFeeForSell"
+						ng-options="cashOrRemitFlag.value as cashOrRemitFlag.text for cashOrRemitFlag in maincom.cashOrRemitFlags"></select>
+				</div>
+				<div ng-show = "maincom.isShowFeeSysCustTypeForSell"><label class="label_title">客户类型</label>
+					<select id="sysCustTypeFeeForSell" style="padding-left: 10px;width: 180px; height: 25px;" ng-model="maincom.sysCustTypeFeeForSell"
+						ng-options="sysCustType.value as sysCustType.text for sysCustType in maincom.sysCustTypes"></select>
+				</div>
+				<div ng-show = "maincom.isShowWtofSrlNumFeeForSell"><label class="label_title">待销账序号</label><input style="left: 15px;width:180px" type="text" maxlength="35" ng-model="maincom.wtofSrlNumFeeForSell" next-ele="maincom.drwAcctFeeForSell" name="wtofSrlNumFeeForSell"  ng-keydown="forInformationEnquiryFeeForSellEnter($event)"/></div>
+				<div ng-show = "maincom.isShowFeeDrwAcctForSell"><label class="label_title">待销账来源账号</label><input style="left: 15px;width:180px" type="text" maxlength="35" ng-model="maincom.drwAcctFeeForSell" next-ele="maincom.subPyrAcctNumFeeForSell" name="drwAcctFeeForSell" /></div>
+				<div ng-show = "maincom.isShowFeeSubPyrAcctNumForSell"><label class="label_title">待销账来源账号子账户序号</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.subPyrAcctNumFeeForSell" next-ele="maincom.drawNmFeeForSell" name="subPyrAcctNumFeeForSell" /></div>
+				<div ng-show = "maincom.isShowFeeDrawNmForSell"><label class="label_title">待销账来源户名</label><input style="left: 15px;width:180px" type="text" maxlength="60" ng-model="maincom.drawNmFeeForSell" next-ele="maincom.pymtAcctTpFeeForSell" name="drawNmFeeForSell" /></div>
+				<div ng-show = "maincom.isShowFeePymtAcctTpForSell"><label class="label_title">待销账来源账户类型</label><input style="left: 15px;width:180px" type="text" maxlength="20" ng-model="maincom.pymtAcctTpFeeForSell" name="pymtAcctTpFeeForSell" /></div>	
+				<button ng-show = "maincom.isShowVerifyFeePayBtnForSell" type="button" class="btn btn-default" ng-click="maincom.verifyFeePayInfoForSell()">验证费用支付项信息</button>
+			</ul>
+		</div>
+		<br/>
+		<div class="widget widget-margin" style="margin-top:0px;margin-left: 0px;margin-right: 0px;">
+			<h4 class="title" style="margin-bottom:0px">金额汇总</h4>
+			<div class="row">
+	       		<div class="col-md-4">
+					<blockquote style="border: 0px;">
+						<p><h5><span class="cus-label">费用种类<font class="cus-value cus-value-blue"></font></span></h5></p>
+					</blockquote>
+				</div>
+				<div class="col-md-4">
+					<blockquote style="border: 0px;">
+						<p><h5><span class="cus-label">币种<font class="cus-value cus-value-blue"></font></span></h5></p>
+					</blockquote>
+				</div>
+				<div class="col-md-4">
+					<blockquote style="border: 0px;">
+						<p><h5><span class="cus-label">金额<font class="cus-value cus-value-blue"></font></span></h5></p>
+					</blockquote>
+				</div>
+	        </div>
+	        <div class="row">
+	       		<div class="col-md-4">
+					<blockquote style="border: 0px;">
+						<p><h5><span class="cus-label"><font class="cus-value cus-value-blue"></font>订单总金额</span></h5></p>
+						<p><h5><span class="cus-label"><font class="cus-value cus-value-blue"></font>费用金额</span></h5></p>
+					</blockquote>
+				</div>
+				<div class="col-md-4">
+					<blockquote style="border: 0px;">	
+					  	<p><h5><span class="cus-label"><font class="cus-value cus-value-blue">人民币</font></span></h5></p>
+						<p><h5><span class="cus-label"><font class="cus-value cus-value-blue">人民币</font></span></h5></p>
+					</blockquote>
+				</div>
+				<div class="col-md-4">
+			     	<blockquote style="border: 0px;">
+						<p><h5><span class="cus-label"><font class="cus-value cus-value-blue"><span id="showOrderPayTotalAmtForSell">0.00</span></font></span></h5></p>
+						<p><h5><span class="cus-label"><font class="cus-value cus-value-blue"><span id="showOrderPayFeeTotalAmtForSell">0.00</span></font></span></h5></p>
+					</blockquote>
+				</div>
+	        </div>
+		</div>
+		<div id="toolbar" style="top: 30px">
+			<div class="form-inline pull-right" style="margin-right: 40px" role="form">
+				合计：<span id="submintOrderPayTotalAmtForSell" style="color: #3b95f2">CNY 0.00</span>元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button id="ok" type="button" ng-click="maincom.orderControlSubmitClickForSell();" ng-disabled="maincom.isDisabledOrderSubmitBtnForSell"
+					style="border-radius: 0px" class="btn btn-primary btn-lg">
+					<span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;结算
+				</button>
+				<button id="orderUpdate" type="button" ng-click="maincom.orderLoadDetailForSell()" 
+					style="border-radius: 0px" class="btn btn-primary btn-lg">
+					<span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;修改
+				</button>
+			</div>
+		</div>
+		<br /> <br /> <br /> <br />
+	</div>
+</body>
+</html>

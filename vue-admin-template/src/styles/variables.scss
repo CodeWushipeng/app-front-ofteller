@@ -1,0 +1,43 @@
+// 导航颜色以及高亮时的颜色
+$menuText:#bfcbd9;
+$menuActiveText:#43A3FB;
+$subMenuActiveText:#f4f4f5; //https://github.com/ElemeFE/element/issues/12951
+
+//导航顶左hover时背景颜色
+$menuHover:#263445;
+$subMenuHover:#001528;
+
+//导航顶左背景颜色
+$menuBg:#304156;
+$subMenuBg:#1f2d3d;
+
+//左侧导航宽度
+$sideBarWidth: 210px;
+
+//table  header背景颜色 border颜色  文字颜色
+$tableHeaderBackgroundColor: #E6EEFB;
+$tableBorderTop:#E6EEFB;
+$tableColor:#666;
+
+//主题色
+$primaryColor:#43A3FB;
+// .app-main的内边距
+$appMainPadding:15px;
+$appMainBackground: #fff;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  tableHeaderBackgroundColor:$tableHeaderBackgroundColor;
+  tableBorderTop:$tableBorderTop;
+  tableColor:$tableColor;
+  appMainPadding:$appMainPadding;
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}

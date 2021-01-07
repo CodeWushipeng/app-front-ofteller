@@ -1,0 +1,471 @@
+[
+  {
+    "availableProduct": {
+      "workStatus": "09",
+      "productId": "23070001",
+      "fromStatus": "04",
+      "releaseDate": "2021-09-08 03:07:41",
+      "marketDepartmentList": [],
+      "productGroupId": "G23",
+      "productTemplateId": "T2301",
+      "productGroupName": "借记卡",
+      "productManagerList": [],
+      "productName": "个人活期账户",
+      "introductionDate": "2019-09-08 03:07:41",
+      "createdDate": "2018-04-27 05:49:30",
+      "isVariant": "Y",
+      "productLineName": "存款",
+      "isVirtual": "N",
+      "manageDepartmentList": [],
+      "salesPostList": [],
+      "productTemplateName": "个人借记卡",
+      "productLineId": "L2"
+    },
+    "productFeatureCatagoryList": [],
+    "productFunctionList": [
+      {
+        "productFunctionName": "取款",
+        "productFunctionType": "0",
+        "productFunctionId": "7410001",
+        "productSupplierList": [],
+        "productModeList": []
+      },
+      {
+        "productFunctionName": "存入",
+        "productFunctionType": "0",
+        "productFunctionId": "7410004",
+        "productSupplierList": [],
+        "productModeList": []
+      }
+    ],
+    "productContentList": [],
+    "productMsgs": [],
+    "productPriceList": null,
+    "productFunctionOrAttrList": [
+      {
+        "productFunctionName": "取款",
+        "productSurveyList": [
+          {
+            "surveyApplType": "CART_ADD",
+            "surveyId": "140005"
+          }
+        ],
+        "productFunctionId": "7410001",
+        "productAttrList": [
+          {
+            "attrName": "amountMax"
+          },
+          {
+            "attrValue": "0.01",
+            "attrName": "amountMin"
+          },
+          {
+            "attrValue": "05",
+            "attrName": "deliveryModel"
+          },
+          {
+            "attrValue": "(function(){return true;})",
+            "attrName": "displayCondition"
+          },
+          {
+            "attrValue": "(function(){return {};})",
+            "attrName": "funDrive"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "isAgreementInterest"
+          },
+          {
+            "attrValue": "000000",
+            "attrName": "manualRefNum"
+          },
+          {
+            "attrName": "mutex"
+          },
+          {
+            "attrName": "mutexProd"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "requireAmount"
+          }
+        ]
+      },
+      {
+        "productFunctionName": "存入",
+        "productSurveyList": [
+          {
+            "surveyApplType": "CART_ADD",
+            "surveyId": "140004"
+          }
+        ],
+        "productFunctionId": "7410004",
+        "productAttrList": [
+          {
+            "attrName": "amountMax"
+          },
+          {
+            "attrValue": "0.01",
+            "attrName": "amountMin"
+          },
+          {
+            "attrValue": "05",
+            "attrName": "deliveryModel"
+          },
+          {
+            "attrValue": "(function(){return true;})",
+            "attrName": "displayCondition"
+          },
+          {
+            "attrValue": "(function(){return {};})",
+            "attrName": "funDrive"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "isAgreementInterest"
+          },
+          {
+            "attrValue": "000000",
+            "attrName": "manualRefNum"
+          },
+          {
+            "attrName": "mutex"
+          },
+          {
+            "attrName": "mutexProd"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "requireAmount"
+          }
+        ]
+      }
+    ],
+    "isOccupyQuota": "0",
+    "isOccupyParentQuota": "1",
+    "distributionMode": "4/6",
+    "releaseMode": "auto",
+    "total": null,
+    "totalLocation": null,
+    "reservedLocation": null
+  },
+  {
+    "availableProduct": {
+      "workStatus": "09",
+      "productId": "23070002",
+      "fromStatus": "04",
+      "releaseDate": "2021-09-08 03:07:41",
+      "marketDepartmentList": [],
+      "productGroupId": "G23",
+      "productTemplateId": "T2301",
+      "productGroupName": "借记卡",
+      "productManagerList": [],
+      "productName": "个人卡",
+      "introductionDate": "2019-09-08 03:07:41",
+      "createdDate": "2018-04-27 05:49:30",
+      "isVariant": "Y",
+      "productLineName": "存款",
+      "isVirtual": "N",
+      "manageDepartmentList": [],
+      "salesPostList": [],
+      "productTemplateName": "个人借记卡",
+      "productLineId": "L2"
+    },
+    "productFeatureCatagoryList": [],
+    "productFunctionList": [
+      {
+        "productFunctionName": "实时发卡",
+        "productFunctionType": "0",
+        "productFunctionId": "7410002",
+        "productSupplierList": [],
+        "productModeList": []
+      },
+      {
+        "productFunctionName": "销卡",
+        "productFunctionType": "0",
+        "productFunctionId": "7410005",
+        "productSupplierList": [],
+        "productModeList": []
+      }
+    ],
+    "productContentList": [],
+    "productMsgs": [],
+    "productPriceList": null,
+    "productFunctionOrAttrList": [
+      {
+        "productFunctionName": "销卡",
+        "productSurveyList": [
+          {
+            "surveyApplType": "CART_ADD",
+            "surveyId": "140002"
+          }
+        ],
+        "productFunctionId": "7410005",
+        "productAttrList": [
+          {
+            "attrName": "amountMax"
+          },
+          {
+            "attrValue": "0.01",
+            "attrName": "amountMin"
+          },
+          {
+            "attrValue": "05",
+            "attrName": "deliveryModel"
+          },
+          {
+            "attrValue": "(function(){return true;})",
+            "attrName": "displayCondition"
+          },
+          {
+            "attrValue": "(function(){return {};})",
+            "attrName": "funDrive"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "isAgreementInterest"
+          },
+          {
+            "attrValue": "000000",
+            "attrName": "manualRefNum"
+          },
+          {
+            "attrName": "mutex"
+          },
+          {
+            "attrName": "mutexProd"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "requireAmount"
+          }
+        ]
+      },
+      {
+        "productFunctionName": "实时发卡",
+        "productSurveyList": [
+          {
+            "surveyApplType": "CART_ADD",
+            "surveyId": "140001"
+          }
+        ],
+        "productFunctionId": "7410002",
+        "productAttrList": [
+          {
+            "attrName": "amountMax"
+          },
+          {
+            "attrValue": "0.01",
+            "attrName": "amountMin"
+          },
+          {
+            "attrValue": "05",
+            "attrName": "deliveryModel"
+          },
+          {
+            "attrValue": "(function(){return true;})",
+            "attrName": "displayCondition"
+          },
+          {
+            "attrValue": "(function(){return {};})",
+            "attrName": "funDrive"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "isAgreementInterest"
+          },
+          {
+            "attrValue": "000000",
+            "attrName": "manualRefNum"
+          },
+          {
+            "attrName": "mutex"
+          },
+          {
+            "attrName": "mutexProd"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "requireAmount"
+          }
+        ]
+      }
+    ],
+    "isOccupyQuota": "0",
+    "isOccupyParentQuota": "1",
+    "distributionMode": "4/6",
+    "releaseMode": "auto",
+    "total": null,
+    "totalLocation": null,
+    "reservedLocation": null
+  },
+  {
+    "availableProduct": {
+      "workStatus": "09",
+      "productId": "23070004",
+      "fromStatus": "04",
+      "releaseDate": "2021-09-15 22:28:48",
+      "marketDepartmentList": [],
+      "productGroupId": "G23",
+      "productTemplateId": "T2301",
+      "productGroupName": "借记卡",
+      "productManagerList": [],
+      "productName": "个人定期",
+      "introductionDate": "2019-09-08 03:07:41",
+      "createdDate": "2018-04-27 05:49:30",
+      "isVariant": "Y",
+      "productLineName": "存款",
+      "isVirtual": "N",
+      "manageDepartmentList": [],
+      "salesPostList": [],
+      "productTemplateName": "个人借记卡",
+      "productLineId": "L2"
+    },
+    "productFeatureCatagoryList": [],
+    "productFunctionList": [
+      {
+        "productFunctionName": "开卡",
+        "productFunctionType": "0",
+        "productFunctionId": "60019",
+        "productSupplierList": [],
+        "productModeList": []
+      },
+      {
+        "productFunctionName": "销卡",
+        "productFunctionType": "0",
+        "productFunctionId": "60020",
+        "productSupplierList": [],
+        "productModeList": []
+      },
+      {
+        "productFunctionName": "部提",
+        "productFunctionType": "0",
+        "productFunctionDes": "部提",
+        "productFunctionId": "FUNC000003",
+        "productSupplierList": [],
+        "productModeList": []
+      }
+    ],
+    "productContentList": [],
+    "productMsgs": [],
+    "productPriceList": null,
+    "productFunctionOrAttrList": [
+      {
+        "productFunctionName": "开卡",
+        "productSurveyList": [
+          {
+            "surveyApplType": "CART_ADD",
+            "surveyId": "140003"
+          }
+        ],
+        "productFunctionId": "60019",
+        "productAttrList": [
+          {
+            "attrName": "amountMax"
+          },
+          {
+            "attrValue": "0.01",
+            "attrName": "amountMin"
+          },
+          {
+            "attrValue": "05",
+            "attrName": "deliveryModel"
+          },
+          {
+            "attrValue": "(function(){return true;})",
+            "attrName": "displayCondition"
+          },
+          {
+            "attrValue": "(function(){return {};})",
+            "attrName": "funDrive"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "isAgreementInterest"
+          },
+          {
+            "attrValue": "000000",
+            "attrName": "manualRefNum"
+          },
+          {
+            "attrName": "mutex"
+          },
+          {
+            "attrName": "mutexProd"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "requireAmount"
+          }
+        ]
+      },
+      {
+        "productFunctionName": "销卡",
+        "productSurveyList": [
+          {
+            "surveyApplType": "CART_ADD",
+            "surveyId": "140007"
+          }
+        ],
+        "productFunctionId": "60020",
+        "productAttrList": [
+          {
+            "attrName": "amountMax"
+          },
+          {
+            "attrValue": "0.01",
+            "attrName": "amountMin"
+          },
+          {
+            "attrValue": "05",
+            "attrName": "deliveryModel"
+          },
+          {
+            "attrValue": "(function(){return true;})",
+            "attrName": "displayCondition"
+          },
+          {
+            "attrValue": "(function(){return {};})",
+            "attrName": "funDrive"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "isAgreementInterest"
+          },
+          {
+            "attrValue": "000000",
+            "attrName": "manualRefNum"
+          },
+          {
+            "attrName": "mutex"
+          },
+          {
+            "attrName": "mutexProd"
+          },
+          {
+            "attrValue": "N",
+            "attrName": "requireAmount"
+          }
+        ]
+      },
+      {
+        "productFunctionName": "部提",
+        "productSurveyList": [
+          {
+            "surveyApplType": "CART_ADD",
+            "surveyId": "140006"
+          }
+        ],
+        "productFunctionId": "FUNC000003",
+        "productAttrList": []
+      }
+    ],
+    "isOccupyQuota": "0",
+    "isOccupyParentQuota": "1",
+    "distributionMode": "4/6",
+    "releaseMode": "auto",
+    "total": null,
+    "totalLocation": null,
+    "reservedLocation": null
+  }
+]
